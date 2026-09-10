@@ -4,7 +4,783 @@
          <a href="tbofcont.html"> BACK To TABLE OF CONTENTS</a>
 
     </head>
-    <body>
+    <body><h1>5. Programming concepts and logics</h1><p>Welcome, NEB Class 11 Computer Science students! In this chapter, we will embark on an exciting journey into the world of programming. Understanding programming concepts and mastering the basics of C programming is crucial for your academic success and future career prospects in the rapidly evolving field of Information and Communication Technology (ICT) in Nepal. This unit, "Programming Concepts and C Programming Basics," is a foundational component of your NEB Class 11 Computer Science syllabus (Curriculum 2076 BS) and carries significant weight in your board examinations. A strong grasp of these topics will not only help you score well but also provide a solid base for more advanced computer science studies. We will cover everything from fundamental ideas like algorithms and flowcharts to the core elements of C language, including data types, operators, control statements, arrays, and string functions, all tailored to the depth and style expected by the Curriculum Development Centre (CDC) and National Examination Board (NEB).
+
+Introduction to Programming Concepts
+Programming is the process of writing instructions that a computer can understand and execute to perform a specific task. These instructions are written in a programming language. The goal of programming is to solve problems efficiently using computational logic.
+
+Key concepts in programming include:
+
+Program: A set of instructions given to a computer to perform a specific task.
+Programming Language: A formal language comprising a set of instructions used to produce computer programs. Examples include C, C++, Java, Python.
+Programmer: An individual who writes computer programs.
+Source Code: The program written by a programmer in a high-level language.
+Object Code (Machine Code): The translated version of the source code into a machine-understandable format (binary code).
+Compiler: A software that translates an entire high-level language program into machine code before execution. C is a compiled language.
+Interpreter: A software that translates and executes high-level language programs line by line.
+Assembler: A software that translates assembly language programs into machine code.
+Algorithms and Flowcharts
+Before writing a program, it's essential to plan the solution logically. Algorithms and flowcharts are two common tools used for this purpose.
+
+Algorithm
+An algorithm is a step-by-step procedure for solving a given problem. It is a finite set of unambiguous instructions that, when followed, accomplishes a particular task. Algorithms are independent of any programming language.
+
+Characteristics of a good algorithm:
+
+Finiteness: An algorithm must terminate after a finite number of steps.
+Definiteness: Each step must be precisely defined and unambiguous.
+Input: An algorithm must have zero or more well-defined inputs.
+Output: An algorithm must have one or more well-defined outputs.
+Effectiveness: Each step must be simple enough to be executed in a finite amount of time.
+Example: Algorithm to find the sum of two numbers.
+
+START
+Declare three integer variables: num1, num2, sum.
+Read the value of num1 from the user.
+Read the value of num2 from the user.
+Calculate sum = num1 + num2.
+Display the value of sum.
+STOP
+Flowchart
+A flowchart is a graphical representation of an algorithm. It uses standard symbols to depict the sequence of operations to be performed to solve a problem. Flowcharts are helpful for visualizing the program's logic and flow.
+
+Common Flowchart Symbols:
+
+Symbol	Name	Purpose
+Terminal Symbol	Terminal	Represents the start or end of a program.
+Process Symbol	Process	Represents an operation or action (e.g., calculations, assignments).
+Input/Output Symbol	Input/Output	Represents data input from or output to a device.
+Decision Symbol	Decision	Represents a point where a decision is made (e.g., if-else conditions). It has one entry and two or more exits (usually 'Yes'/'No' or 'True'/'False').
+Flow Line Symbol	Flow Line	Indicates the direction of program flow.
+Example: Flowchart to find the sum of two numbers.
+
+Flowchart for sum of two numbers
+(Image description: A flowchart showing the process of adding two numbers. It starts with 'Start' (oval), then 'Input Num1, Num2' (parallelogram), followed by 'Sum = Num1 + Num2' (rectangle), then 'Print Sum' (parallelogram), and finally 'End' (oval). Arrows connect each step in sequence.)
+
+Introduction to C Programming Language
+C is a powerful, general-purpose, structured programming language developed by Dennis Ritchie at Bell Laboratories in the early 1970s. It is a middle-level language, meaning it combines features of both high-level and low-level languages. C is widely used for system programming (like operating systems, compilers) and application programming due to its efficiency and flexibility.
+
+Features of C programming language:
+
+Structured Language: C supports structured programming, allowing programs to be broken down into smaller, manageable functions or blocks.
+Middle-level Language: It provides high-level features for ease of programming and low-level features for direct memory manipulation.
+Portability: C programs can be compiled and run on different hardware platforms with minimal changes.
+Rich Library Functions: C comes with a rich set of built-in functions for various tasks.
+Memory Management: C allows direct memory access using pointers, offering fine-grained control over memory.
+Fast Execution Speed: Compiled C programs are generally very fast.
+Structure of a C Program
+A basic C program has a specific structure. Understanding this structure is fundamental to writing any C program.
+
+
+#include <stdio.h> // Preprocessor Directive
+
+// Global Variable Declaration (Optional)
+int globalVar = 10;
+
+// Function Declaration (Optional)
+void myFunction(); 
+
+int main() { // Main function: program execution begins here
+    // Local Variable Declaration
+    int localVar = 20;
+
+    // Executable Statements
+    printf("Hello, Readers Nepal!\n");
+    printf("Global variable: %d\n", globalVar);
+    printf("Local variable: %d\n", localVar);
+
+    myFunction(); // Function call
+
+    return 0; // Indicates successful program termination
+}
+
+// Function Definition (Optional)
+void myFunction() {
+    printf("This is a user-defined function.\n");
+}
+Explanation of the structure:
+
+Preprocessor Directives: Lines starting with # are preprocessor directives. They are processed before the actual compilation. #include <stdio.h> tells the compiler to include the standard input/output header file, which contains declarations for functions like printf() and scanf().
+Global Variable Declaration (Optional): Variables declared outside any function are global and can be accessed from anywhere in the program.
+Function Declaration (Optional): Declaring a function before its definition (also called a prototype) informs the compiler about the function's name, return type, and parameters.
+main() Function: This is the most important part of any C program. Program execution always begins and ends with the main() function. Every C program must have exactly one main() function.
+Local Variable Declaration: Variables declared inside a function are local to that function and can only be accessed within it.
+Executable Statements: These are the instructions that perform the actual tasks of the program. Each statement typically ends with a semicolon (;).
+return 0;: In the main() function, return 0; indicates that the program executed successfully. Any non-zero value usually indicates an error.
+User-defined Functions (Optional): Programmers can create their own functions to perform specific tasks, promoting modularity and reusability.
+Comments: Text enclosed between /* ... */ or starting with // are comments. They are ignored by the compiler and are used to explain the code for better understanding.
+Data Types, Variables, and Constants
+To work with data in C, you need to understand data types, variables, and constants.
+
+Data Types
+Data types specify the type of data a variable can hold, such as integers, floating-point numbers, or characters. They also determine the amount of memory allocated for the variable.
+
+Basic Data Types in C:
+
+Data Type	Description	Memory (Typical)	Range (Typical)	Format Specifier
+int	Integer numbers (whole numbers, positive or negative).	2 or 4 bytes	-32,768 to 32,767 (2 bytes) or -2,147,483,648 to 2,147,483,647 (4 bytes)	%d or %i
+float	Single-precision floating-point numbers (decimal numbers).	4 bytes	1.2E-38 to 3.4E+38	%f
+double	Double-precision floating-point numbers (more precision than float).	8 bytes	2.3E-308 to 1.7E+308	%lf (for scanf), %f or %lf (for printf)
+char	Single character.	1 byte	-128 to 127 or 0 to 255	%c
+void	Represents the absence of type. Used with functions that don't return a value or with generic pointers.	N/A	N/A	N/A
+Data Type Modifiers: Modifiers like short, long, signed, and unsigned can be used with basic data types to alter their size and range.
+
+Variables
+A variable is a named memory location used to store data. The value stored in a variable can change during program execution. Before using a variable, it must be declared with a specific data type.
+
+Syntax for declaring a variable:
+
+
+dataType variableName;
+dataType variableName1, variableName2;
+Example:
+
+
+int age;           // Declares an integer variable named 'age'
+float salary;      // Declares a float variable named 'salary'
+char initial;      // Declares a character variable named 'initial'
+Initializing Variables: Assigning an initial value to a variable during its declaration.
+
+
+int marks = 85;
+float price = 150.75;
+char grade = 'A';
+Rules for Naming Variables (Identifiers):
+
+Must begin with an alphabet (A-Z, a-z) or an underscore (_).
+Can contain alphabets, digits (0-9), and underscores.
+Cannot contain spaces or special symbols other than an underscore.
+Keywords (reserved words) cannot be used as variable names.
+Variable names are case-sensitive (age and Age are different).
+Should be descriptive to improve readability.
+Constants
+Constants are fixed values that do not change during the execution of a program. They can be of any basic data type.
+
+Types of Constants:
+
+Integer Constants: Whole numbers (e.g., 10, -5, 0).
+Floating-point Constants: Decimal numbers (e.g., 3.14, -0.001, 2.5e-3).
+Character Constants: A single character enclosed in single quotes (e.g., 'A', '5', '$').
+String Literals: A sequence of characters enclosed in double quotes (e.g., "Hello", "Nepal").
+Defining Constants:
+
+Using const keyword:
+
+const float PI = 3.14159;
+const int MAX_ATTEMPTS = 3;
+    
+Using #define preprocessor directive:
+
+#define PI 3.14159
+#define MAX_ATTEMPTS 3
+    
+Operators and Expressions
+Operators are symbols that perform operations on operands (variables or values). An expression is a combination of operators, operands, and function calls that evaluates to a single value.
+
+Types of Operators in C:
+
+1. Arithmetic Operators
+Used to perform mathematical calculations.
+
+Operator	Description	Example
++	Addition	a + b
+-	Subtraction	a - b
+*	Multiplication	a * b
+/	Division (integer division if both operands are integers)	a / b
+%	Modulus (remainder of integer division)	a % b
+2. Relational Operators
+Used to compare two operands and return a boolean result (true/1 or false/0).
+
+Operator	Description	Example
+==	Equal to	a == b
+!=	Not equal to	a != b
+>	Greater than	a > b
+<	Less than	a < b
+>=	Greater than or equal to	a >= b
+<=	Less than or equal to	a <= b
+3. Logical Operators
+Used to combine or negate relational expressions.
+
+Operator	Description	Example
+&&	Logical AND (true if both operands are true)	(a > 0 && b < 10)
+||	Logical OR (true if at least one operand is true)	(a == 5 || b == 7)
+!	Logical NOT (inverts the truth value)	!(a > b)
+4. Assignment Operators
+Used to assign a value to a variable.
+
+Operator	Description	Example	Equivalent to
+=	Simple assignment	a = 10;	a = 10;
++=	Add and assign	a += b;	a = a + b;
+-=	Subtract and assign	a -= b;	a = a - b;
+*=	Multiply and assign	a *= b;	a = a * b;
+/=	Divide and assign	a /= b;	a = a / b;
+%=	Modulus and assign	a %= b;	a = a % b;
+5. Increment and Decrement Operators
+Used to increase or decrease the value of a variable by 1.
+
+Operator	Description	Example
+++	Increment (a++ or ++a)	a++; (post-increment), ++a; (pre-increment)
+--	Decrement (a-- or --a)	a--; (post-decrement), --a; (pre-decrement)
+Note: Pre-increment/decrement changes the value before using it in the expression, while post-increment/decrement changes the value after using it.
+
+Input/Output (I/O) Functions
+I/O functions allow a program to interact with the user by taking input and displaying output. The standard I/O functions in C are part of the <stdio.h> header file.
+
+printf() Function
+Used to display output on the console.
+
+
+#include <stdio.h>
+
+int main() {
+    int age = 17;
+    float height = 5.6;
+    char initial = 'S';
+
+    printf("My name is Suraj and I am %d years old.\n", age);
+    printf("My height is %.2f feet.\n", height);
+    printf("My initial is %c.\n", initial);
+    printf("This is a simple message.\n");
+    return 0;
+}
+Output:
+
+My name is Suraj and I am 17 years old.
+My height is 5.60 feet.
+My initial is S.
+This is a simple message.
+Format Specifiers used with printf():
+
+%d or %i: For integers.
+%f: For floating-point numbers. (%.2f prints two decimal places).
+%c: For characters.
+%s: For strings.
+\n: Newline character.
+\t: Tab space.
+scanf() Function
+Used to read input from the keyboard.
+
+
+#include <stdio.h>
+
+int main() {
+    int rollNo;
+    char grade;
+    float percentage;
+
+    printf("Enter your Roll Number: ");
+    scanf("%d", &rollNo); // & is the address-of operator
+
+    printf("Enter your Grade (A/B/C): ");
+    scanf(" %c", &grade); // Space before %c to consume any leftover newline character
+
+    printf("Enter your Percentage: ");
+    scanf("%f", &percentage);
+
+    printf("\n--- Student Details ---\n");
+    printf("Roll Number: %d\n", rollNo);
+    printf("Grade: %c\n", grade);
+    printf("Percentage: %.2f%%\n", percentage);
+    return 0;
+}
+Output (Example):
+
+Enter your Roll Number: 101
+Enter your Grade (A/B/C): A
+Enter your Percentage: 78.5
+
+--- Student Details ---
+Roll Number: 101
+Grade: A
+Percentage: 78.50%
+Note: The & (address-of) operator is crucial with scanf() to store the input value at the memory address of the variable. For reading strings using scanf("%s", string_variable), the & is not needed as array names decay to pointers. However, scanf() with %s stops reading at whitespace. For reading strings with spaces, fgets() is preferred.
+
+Selection Control Statements
+Selection (or decision-making) control statements allow a program to execute different blocks of code based on certain conditions.
+
+1. if Statement
+Executes a block of code only if a specified condition is true.
+
+
+#include <stdio.h>
+
+int main() {
+    int age = 19;
+    if (age >= 18) {
+        printf("You are eligible to vote in Nepal.\n");
+    }
+    printf("Program continues...\n");
+    return 0;
+}
+Output:
+
+You are eligible to vote in Nepal.
+Program continues...
+2. if-else Statement
+Executes one block of code if the condition is true and another block if the condition is false.
+
+
+#include <stdio.h>
+
+int main() {
+    int marks = 65;
+    if (marks >= 40) {
+        printf("Congratulations! You have passed the exam.\n");
+    } else {
+        printf("Sorry, you have failed. Better luck next time.\n");
+    }
+    return 0;
+}
+Output:
+
+Congratulations! You have passed the exam.
+3. Nested if-else Statement
+An if-else statement inside another if or else block.
+
+
+#include <stdio.h>
+
+int main() {
+    int num;
+    printf("Enter an integer: ");
+    scanf("%d", &num);
+
+    if (num > 0) {
+        printf("The number is positive.\n");
+        if (num % 2 == 0) {
+            printf("It is an even number.\n");
+        } else {
+            printf("It is an odd number.\n");
+        }
+    } else if (num < 0) {
+        printf("The number is negative.\n");
+    } else {
+        printf("The number is zero.\n");
+    }
+    return 0;
+}
+Output (Example for input 10):
+
+Enter an integer: 10
+The number is positive.
+It is an even number.
+4. switch Statement
+Allows a variable to be tested for equality against a list of values (cases). It is useful when there are multiple possible conditions based on a single variable's value.
+
+
+#include <stdio.h>
+
+int main() {
+    char grade;
+    printf("Enter your grade (A, B, C, D, F): ");
+    scanf(" %c", &grade);
+
+    switch (grade) {
+        case 'A':
+        case 'a':
+            printf("Excellent work!\n");
+            break;
+        case 'B':
+        case 'b':
+            printf("Good job!\n");
+            break;
+        case 'C':
+        case 'c':
+            printf("Satisfactory.\n");
+            break;
+        case 'D':
+        case 'd':
+            printf("Pass.\n");
+            break;
+        case 'F':
+        case 'f':
+            printf("Fail.\n");
+            break;
+        default:
+            printf("Invalid grade entered.\n");
+    }
+    return 0;
+}
+Output (Example for input B):
+
+Enter your grade (A, B, C, D, F): B
+Good job!
+Note: The break statement is used to exit the switch block once a match is found. If break is omitted, execution "falls through" to the next case. The default case is executed if no match is found.
+
+Iteration Control Statements (Loops)
+Iteration (or looping) control statements allow a block of code to be executed repeatedly as long as a certain condition is true.
+
+1. for Loop
+Used when the number of iterations is known beforehand.
+
+
+#include <stdio.h>
+
+int main() {
+    int i;
+    printf("Numbers from 1 to 5:\n");
+    for (i = 1; i <= 5; i++) {
+        printf("%d\n", i);
+    }
+    return 0;
+}
+Output:
+
+Numbers from 1 to 5:
+1
+2
+3
+4
+5
+Structure: for (initialization; condition; update) { // code to be executed }
+
+2. while Loop
+Used when the number of iterations is not known beforehand, and the loop continues as long as the condition is true. The condition is checked at the beginning of each iteration.
+
+
+#include <stdio.h>
+
+int main() {
+    int i = 1;
+    printf("Numbers from 1 to 5:\n");
+    while (i <= 5) {
+        printf("%d\n", i);
+        i++;
+    }
+    return 0;
+}
+Output:
+
+Numbers from 1 to 5:
+1
+2
+3
+4
+5
+3. do-while Loop
+Similar to the while loop, but the condition is checked at the end of the loop. This ensures that the loop body is executed at least once, regardless of the condition.
+
+
+#include <stdio.h>
+
+int main() {
+    int i = 1;
+    printf("Numbers from 1 to 5:\n");
+    do {
+        printf("%d\n", i);
+        i++;
+    } while (i <= 5);
+    return 0;
+}
+Output:
+
+Numbers from 1 to 5:
+1
+2
+3
+4
+5
+Difference between while and do-while loop: The while loop checks the condition before executing the loop body, so the body might not execute at all if the condition is initially false. The do-while loop executes the body at least once, then checks the condition.
+
+Arrays (One-dimensional, Two-dimensional)
+An array is a collection of elements of the same data type stored at contiguous memory locations. Elements are accessed using an index.
+
+1. One-dimensional (1D) Arrays
+A 1D array is a linear collection of elements, like a list.
+
+Declaration: dataType arrayName[size];
+
+Initialization:
+
+
+int marks = {70, 85, 60, 90, 75}; // During declaration
+int scores;
+scores = 95; // After declaration
+scores = 88;
+scores = 72;
+Accessing Elements: Elements are accessed using their index, which starts from 0.
+
+
+#include <stdio.h>
+
+int main() {
+    int studentMarks = {75, 80, 65, 90, 88};
+    int i;
+
+    printf("Marks of 5 students:\n");
+    for (i = 0; i < 5; i++) {
+        printf("Student %d: %d\n", i + 1, studentMarks[i]);
+    }
+    return 0;
+}
+Output:
+
+Marks of 5 students:
+Student 1: 75
+Student 2: 80
+Student 3: 65
+Student 4: 90
+Student 5: 88
+2. Two-dimensional (2D) Arrays
+A 2D array is an array of arrays, often visualized as a table or matrix with rows and columns.
+
+Declaration: dataType arrayName[rows][columns];
+
+Initialization:
+
+
+int matrix = {{1, 2, 3}, {4, 5, 6}}; // During declaration, row-wise
+Accessing Elements: Elements are accessed using two indices: one for the row and one for the column.
+
+
+#include <stdio.h>
+
+int main() {
+    int studentScores = {
+        {85, 90}, // Student 1: Subject 1, Subject 2
+        {70, 78}, // Student 2: Subject 1, Subject 2
+        {92, 88}  // Student 3: Subject 1, Subject 2
+    };
+    int i, j;
+
+    printf("Student Scores (Subject 1 | Subject 2):\n");
+    for (i = 0; i < 3; i++) { // Loop for rows
+        printf("Student %d: ", i + 1);
+        for (j = 0; j < 2; j++) { // Loop for columns
+            printf("%d ", studentScores[i][j]);
+        }
+        printf("\n");
+    }
+    return 0;
+}
+Output:
+
+Student Scores (Subject 1 | Subject 2):
+Student 1: 85 90 
+Student 2: 70 78 
+Student 3: 92 88 
+String Functions
+In C, a string is an array of characters terminated by a null character (\0). The <string.h> header file provides several built-in functions to manipulate strings.
+
+Here are some commonly used string functions:
+
+Function	Description	Example
+strlen(string)	Calculates the length of a string (number of characters excluding the null terminator).	int len = strlen("Nepal"); (len will be 5)
+strcpy(destination, source)	Copies the content of the source string to the destination string.	char dest; strcpy(dest, "Hello"); (dest becomes "Hello")
+strcat(destination, source)	Concatenates (joins) the source string to the end of the destination string.	char s1 = "Hello"; strcat(s1, " World"); (s1 becomes "Hello World")
+strcmp(string1, string2)	Compares two strings lexicographically. Returns 0 if strings are equal, a negative value if string1 is less than string2, and a positive value if string1 is greater than string2.	strcmp("apple", "banana"); (returns negative)
+strrev(string)	Reverses a given string.	char str[] = "C Prog"; strrev(str); (str becomes "gorP C")
+strupr(string)	Converts all lowercase characters in a string to uppercase.	char str[] = "hello"; strupr(str); (str becomes "HELLO")
+strlwr(string)	Converts all uppercase characters in a string to lowercase.	char str[] = "HELLO"; strlwr(str); (str becomes "hello")
+
+#include <stdio.h>
+#include <string.h> // Required for string functions
+
+int main() {
+    char name = "Kathmandu";
+    char city;
+    char greeting = "Namaste";
+
+    // strlen()
+    printf("Length of name: %d\n", strlen(name)); // Output: 9
+
+    // strcpy()
+    strcpy(city, name);
+    printf("Copied city: %s\n", city); // Output: Kathmandu
+
+    // strcat()
+    strcat(greeting, " Nepal!");
+    printf("Concatenated greeting: %s\n", greeting); // Output: Namaste Nepal!
+
+    // strcmp()
+    if (strcmp(name, "kathmandu") == 0) {
+        printf("Strings are equal.\n");
+    } else {
+        printf("Strings are not equal (case-sensitive).\n"); // Output for this example
+    }
+
+    // strrev() - Note: strrev is not standard C, but often available in compilers like Turbo C/GCC
+    // char reversedName;
+    // strcpy(reversedName, name);
+    // strrev(reversedName);
+    // printf("Reversed name: %s\n", reversedName); // Output: udnamhtaK
+
+    // strupr() and strlwr() - Also non-standard, but common extensions
+    // char upperName;
+    // strcpy(upperName, name);
+    // strupr(upperName);
+    // printf("Uppercase name: %s\n", upperName); // Output: KATHMANDU
+
+    // char lowerName;
+    // strcpy(lowerName, name);
+    // strlwr(lowerName);
+    // printf("Lowercase name: %s\n", lowerName); // Output: kathmandu
+
+    return 0;
+}
+Output:
+
+Length of name: 9
+Copied city: Kathmandu
+Concatenated greeting: Namaste Nepal!
+Strings are not equal (case-sensitive).
+Note: Some string functions like strrev(), strupr(), and strlwr() are not part of the standard C library (ANSI C) but are commonly available as extensions in many compilers (e.g., Turbo C, GCC). For strict portability, you might need to implement their logic manually or use functions like toupper()/tolower() from <ctype.h> in a loop.
+
+Activities & Practice
+Define an algorithm. Write an algorithm to check if a given number is even or odd.
+
+Brief Answer: An algorithm is a step-by-step procedure to solve a problem.
+Algorithm:
+
+START
+Declare an integer variable num.
+Read num from the user.
+If num % 2 == 0, then display "Number is Even".
+Else, display "Number is Odd".
+STOP
+What are the key differences between a while loop and a do-while loop in C programming? Give a simple example for each.
+
+Brief Answer: A while loop checks the condition before executing the loop body, so it may not execute at all. A do-while loop executes the loop body at least once, then checks the condition.
+While Loop:
+
+
+int i = 0;
+while (i < 3) {
+    printf("%d ", i);
+    i++;
+}
+// Output: 0 1 2
+            
+Do-While Loop:
+
+int j = 0;
+do {
+    printf("%d ", j);
+    j++;
+} while (j < 3);
+// Output: 0 1 2
+            
+Explain the purpose of the & operator in scanf() and the format specifier %s for strings. Why is & not always needed with %s?
+
+Brief Answer: The & (address-of) operator provides the memory address of a variable to scanf(), allowing it to store the input value directly into that location. For strings, when using scanf("%s", string_variable), the array name (string_variable) itself acts as a pointer to its base address, so & is not explicitly needed.
+
+Sample Board Exam Questions
+Section B: Short Answer Questions (5 marks each)
+
+Write a C program to input five numbers from the user and calculate their sum and average using a one-dimensional array. (5 marks)
+
+Solution:
+
+
+#include <stdio.h>
+
+int main() {
+    int numbers;
+    int sum = 0;
+    float average;
+    int i;
+
+    printf("Enter 5 integer numbers:\n");
+    for (i = 0; i < 5; i++) {
+        printf("Enter number %d: ", i + 1);
+        scanf("%d", &numbers[i]);
+        sum += numbers[i]; // Add to sum
+    }
+
+    average = (float)sum / 5; // Calculate average
+
+    printf("\nSum of numbers: %d\n", sum);
+    printf("Average of numbers: %.2f\n", average);
+
+    return 0;
+}
+        
+Explanation: The program declares an integer array numbers of size 5. It then uses a for loop to prompt the user to enter 5 numbers, stores them in the array, and simultaneously calculates their sum. Finally, it computes the average by dividing the sum by 5 (casting sum to float to ensure floating-point division) and displays both results.
+
+Differentiate between if-else and switch statements with suitable examples. (5 marks)
+
+Solution:
+
+Feature	if-else Statement	switch Statement
+Purpose	Used for decision making based on a condition (true/false). Can handle complex conditions.	Used for decision making based on comparing a single variable's value against multiple constant integer or character values.
+Conditions	Evaluates boolean (true/false) expressions. Can use relational and logical operators.	Evaluates an expression that results in an integer or character value. Only equality checks are performed.
+Flexibility	More flexible, can handle ranges of values and multiple conditions.	Less flexible; suitable for fixed sets of values.
+Execution	Executes the first block whose condition is true.	Executes the block corresponding to the matching case value. Requires break to prevent fall-through.
+Example (if-else):
+
+
+// Check if a number is positive, negative, or zero
+int num = 5;
+if (num > 0) {
+    printf("Positive\n");
+} else if (num < 0) {
+    printf("Negative\n");
+} else {
+    printf("Zero\n");
+}
+        
+Example (switch):
+
+
+// Check day of the week
+int day = 3;
+switch (day) {
+    case 1: printf("Sunday\n"); break;
+    case 2: printf("Monday\n"); break;
+    case 3: printf("Tuesday\n"); break;
+    default: printf("Invalid day\n");
+}
+        
+Section C: Long Answer Questions (8 marks each)
+
+Define an array. Explain one-dimensional and two-dimensional arrays with their declaration, initialization, and an example C program to input and display elements of a 2x3 matrix. (8 marks)
+
+Solution:
+
+An array is a collection of homogeneous (same type) data elements stored at contiguous memory locations. Each element can be accessed using an index or subscript.
+
+One-dimensional (1D) Array: A 1D array is a linear list of elements of the same data type. It has a single subscript to identify elements.
+
+Declaration: dataType arrayName[size]; (e.g., int marks;)
+Initialization: Elements can be assigned values during declaration (e.g., int numbers[] = {10, 20, 30};) or individually using their index (e.g., numbers = 10;).
+Two-dimensional (2D) Array: A 2D array is an array of arrays, often represented as a table or matrix with rows and columns. It requires two subscripts (one for row, one for column) to access an element.
+
+Declaration: dataType arrayName[rows][columns]; (e.g., int matrix;)
+Initialization: Can be initialized row-wise during declaration (e.g., int arr = {{1, 2}, {3, 4}};) or by taking input for each element.
+Example C program to input and display elements of a 2x3 matrix:
+
+
+#include <stdio.h>
+
+int main() {
+    int matrix; // Declare a 2x3 integer matrix
+    int i, j;
+
+    printf("Enter elements for a 2x3 matrix:\n");
+    // Input elements
+    for (i = 0; i < 2; i++) { // Loop for rows
+        for (j = 0; j < 3; j++) { // Loop for columns
+            printf("Enter element matrix[%d][%d]: ", i, j);
+            scanf("%d", &matrix[i][j]);
+        }
+    }
+
+    printf("\n--- Displaying the 2x3 Matrix ---\n");
+    // Display elements
+    for (i = 0; i < 2; i++) { // Loop for rows
+        for (j = 0; j < 3; j++) { // Loop for columns
+            printf("%d\t", matrix[i][j]); // Print element followed by a tab
+        }
+        printf("\n"); // Move to the next line after each row
+    }
+
+    return 0;
+}
+        
+Explanation: The program first declares a 2D array named matrix with 2 rows and 3 columns. Nested for loops are used to iterate through each element. The outer loop controls the rows (from 0 to 1), and the inner loop controls the columns (from 0 to 2). User input is taken for each element using scanf(). Another set of nested loops is then used to print the elements in a matrix format, with a tab (\t) separating columns and a newline (\n) after each row.
+
+
+</p>
         
     </body>
 </html>

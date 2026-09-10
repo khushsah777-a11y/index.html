@@ -2,7 +2,329 @@
     <head> <a href="tbofcont.html"> BACK To TABLE OF CONTENTS</a>
 
     </head>
-    <body>
+    <body><h1>6. Web technology - I</h1>
+        <p>Welcome, NEB Class 11 Computer Science students! In this chapter, 'Web Technology - I', we will embark on an exciting journey into the world of the internet and web development. Understanding web technology is crucial in today's digital age, not only for navigating the vast online landscape but also for building your own digital presence. This unit is an important part of your NEB board examination, and mastering these concepts will help you score well in both theoretical and practical assessments. We will cover essential topics from web browsers to the basics of creating web pages using HTML and styling them with CSS, all aligned with the CDC/NEB curriculum to prepare you thoroughly for your exams.
+
+Web Browsers and Search Engines
+The internet is a vast network of computers, and to access the information available on it, we use specific software. These are primarily web browsers and search engines.
+
+Web Browser: A web browser is an application software that allows users to access, retrieve, and view information and content on the World Wide Web (WWW). It acts as an interface between the user and the web server. When you type a website address (URL) or click a link, the browser sends a request to the web server, which then sends back the requested web page. The browser interprets the code (like HTML, CSS, JavaScript) and displays the content in a human-readable format.
+
+Common Web Browsers:
+
+Google Chrome
+Mozilla Firefox
+Microsoft Edge
+Apple Safari
+Opera
+Search Engine: A search engine is a web-based tool that enables users to locate information on the World Wide Web. Its main purpose is to search for information on the internet. Search engines are software programs that search for websites based on keywords typed in by the user. They go through their database of information to locate the information you are looking for.
+
+How a Search Engine Works:
+
+Crawling: Search engine bots (also called spiders or crawlers) systematically browse the web, discovering new and updated web pages.
+Indexing: The information gathered by crawlers is then processed and stored in a massive database, creating an index. This index is like a giant library catalog.
+Searching: When a user enters a query, the search engine quickly searches its index for relevant pages and ranks them based on various algorithms to provide the most accurate results.
+Popular Search Engines:
+
+Google
+Bing
+Yahoo!
+DuckDuckGo
+Overview of Internet and Web Technology
+Internet: The Internet is a global system of interconnected computer networks that uses the Internet protocol suite (TCP/IP) to link billions of devices worldwide. It is a "network of networks" that consists of private, public, academic, business, and government networks of local to global scope, linked by a broad array of electronic, wireless, and optical networking technologies.
+
+Key Concepts of the Internet:
+
+World Wide Web (WWW): Often confused with the internet, the WWW is a system of interconnected hypertext documents and other web resources that are accessed via the internet. It's an application built on top of the internet.
+Client-Server Model: The internet primarily operates on a client-server model. A client (your web browser) requests information or services from a server (a powerful computer hosting websites).
+Protocols: These are rules that govern how data is transmitted over the internet. Examples include HTTP (Hypertext Transfer Protocol), HTTPS (Secure HTTP), FTP (File Transfer Protocol), and TCP/IP (Transmission Control Protocol/Internet Protocol).
+IP Address: A unique numerical label assigned to each device connected to a computer network that uses the Internet Protocol for communication.
+Domain Name System (DNS): A hierarchical and decentralized naming system for computers, services, or other resources connected to the Internet or a private network. It translates human-readable domain names (like google.com) into IP addresses.
+Web Technology: Web technology broadly refers to the tasks associated with developing websites for hosting via the internet or intranet. It encompasses the various tools, languages, and protocols used to create and maintain websites and web applications. This can range from developing static pages to complex web-based applications like e-commerce or social network websites.
+
+Content Management System (CMS)
+A Content Management System (CMS) is an application that allows users to create, manage, and modify content on a website without the need for specialized technical knowledge or coding skills. It simplifies the process of web content creation, workflow management, and publishing.
+
+Key Features of a CMS:
+
+User-friendly Interface: Often provides a graphical user interface (GUI) with text editors similar to word processors.
+Content Creation and Editing: Tools to easily add, edit, and format text, images, videos, and other media.
+Workflow Management: Allows multiple users to collaborate, with roles and permissions (e.g., author, editor, publisher).
+Design Templates: Offers pre-designed templates or themes to quickly change the look and feel of a website without altering the content.
+SEO Tools: Built-in features to help optimize website content for search engines.
+Scalability: Can manage small personal blogs to large corporate websites.
+Examples of Popular CMS:
+
+WordPress
+Joomla!
+Drupal
+Wix
+Shopify
+Introduction to HTML (Objectives, Structure, Tags, Attributes)
+HTML (Hypertext Markup Language): HTML is the standard markup language for creating web pages. It provides the basic structure of a web page, defining its content and layout. Without HTML, the World Wide Web would not exist.
+
+Objectives of HTML:
+
+To define the structure of web content.
+To enable embedding text, images, multimedia, and other links or documents.
+To provide a means to prepare a structured document by using paragraphs, formatting, links, and lists.
+To allow web browsers to display the content of a web page.
+To serve as the foundation upon which other web technologies like CSS and JavaScript are built.
+Basic Structure of an HTML Document:
+
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>My First Web Page</title>
+</head>
+<body>
+    <h1>Welcome to Web Technology - I</h1>
+    <p>This is a paragraph about HTML.</p>
+</body>
+</html>
+Explanation:
+
+<!DOCTYPE html>: Declares the document type and version of HTML (HTML5 in this case).
+<html>...</html>: The root element that encloses all other HTML elements.
+<head>...</head>: Contains meta-information about the HTML document, such as the title, character set, and links to stylesheets. This content is not directly visible on the web page.
+<title>...</title>: Sets the title that appears in the browser's title bar or tab.
+<body>...</body>: Contains the visible content of the web page, including text, images, links, etc.
+HTML Tags: Tags are the hidden keywords within a web page that define how your web browser must format and display the content. Most HTML tags come in pairs: an opening tag (e.g., <p>) and a closing tag (e.g., </p>). The content goes between these tags.
+
+Examples of Tags:
+
+<h1> to <h6>: Heading tags (from largest to smallest).
+<p>: Paragraph tag.
+<a>: Anchor tag for creating hyperlinks.
+<img>: Image tag (self-closing).
+<ul>, <ol>, <li>: Unordered list, ordered list, and list item tags.
+HTML Attributes: Attributes provide additional information about HTML elements. They are always specified in the opening tag and usually come in name/value pairs like name="value".
+
+Example:
+
+
+<a href="https://www.readersnepal.com" target="_blank">Visit Readers Nepal</a>
+<img src="image.jpg" alt="Description of Image" width="200" height="150">
+In the <a> tag:
+
+href: Specifies the URL of the page the link goes to.
+target: Specifies where to open the linked document (e.g., _blank opens in a new tab).
+In the <img> tag:
+
+src: Specifies the path to the image file.
+alt: Provides alternative text for the image, useful for accessibility if the image cannot be displayed.
+width and height: Define the dimensions of the image.
+Types of Tags in HTML
+HTML tags can be broadly categorized into two main types:
+
+1. Paired Tags (Container Tags):
+
+These tags require both an opening tag and a closing tag. The content is placed between these two tags. They are also known as container tags because they "contain" the content they are formatting.
+
+Examples:
+
+<p>...</p> (Paragraph)
+<h1>...</h1> (Heading)
+<b>...</b> (Bold text)
+<i>...</i> (Italic text)
+<div>...</div> (Division/Section)
+<span>...</span> (Inline section)
+
+<p>This is a <b>bold</b> text within a paragraph.</p>
+2. Unpaired Tags (Empty Tags / Self-closing Tags):
+
+These tags do not require a closing tag because they do not enclose any content. They are used to insert something into the document, like an image or a line break. They are also called empty tags or self-closing tags.
+
+Examples:
+
+<img> (Image)
+<br> (Line break)
+<hr> (Horizontal rule)
+<input> (Input field for forms)
+<meta> (Metadata)
+<link> (Link to external resources like CSS)
+
+<p>This is the first line.<br>This is the second line.</p>
+<hr>
+<img src="logo.png" alt="Company Logo">
+Introduction to Cascading Style Sheet (CSS), Types and Uses
+CSS (Cascading Style Sheets): CSS is a stylesheet language used to describe the presentation of a document written in HTML or XML. It handles all the colors, fonts, and layouts for your HTML. CSS allows you to control the look and feel of your web pages, separating the content (HTML) from its visual presentation (CSS).
+
+Uses of CSS:
+
+Separation of Content and Presentation: HTML focuses on structure, while CSS focuses on styling, making code cleaner and easier to maintain.
+Consistent Styling: Apply a consistent look across multiple web pages from a single CSS file.
+Faster Page Load Times: By storing styles in external files, browsers can cache CSS, leading to faster loading for subsequent pages.
+Responsive Design: CSS enables websites to adapt their layout and appearance to different screen sizes and devices (desktops, tablets, mobile phones).
+Richer User Experience: Allows for advanced visual effects, animations, and interactive elements.
+Types of CSS:
+
+There are three main ways to implement CSS in an HTML document:
+
+1. Inline CSS:
+
+Inline CSS is used to apply a unique style to a single HTML element. The style rule is written directly inside the HTML opening tag using the style attribute. This method is generally not recommended for large-scale styling as it mixes content with presentation and makes maintenance difficult.
+
+
+<p style="color: blue; font-size: 16px;">This paragraph has inline styles.</p>
+2. Internal CSS (Embedded CSS):
+
+Internal CSS is used to define styles for a single HTML page. The CSS rules get grouped together within a <style> tag, which is placed in the <head> section of your HTML document. This is useful for applying styles that are specific to one page.
+
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Internal CSS Example</title>
+    <style>
+        body {
+            background-color: lightgray;
+            font-family: Arial, sans-serif;
+        }
+        h1 {
+            color: green;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <h1>Hello from Internal CSS</h1>
+    <p>This page uses embedded styles.</p>
+</body>
+</html>
+3. External CSS:
+
+External CSS is the most common and recommended method for styling websites. All your CSS rules are written in a totally separate file with a .css extension. This external stylesheet is then linked to the HTML document using the <link> tag in the <head> section. This method is highly efficient for styling massive multi-page websites.
+
+Example (styles.css file):
+
+
+body {
+    background-color: #f0f8ff;
+    font-family: Verdana, Geneva, sans-serif;
+}
+h1 {
+    color: #8a2be2;
+    text-align: left;
+}
+p {
+    line-height: 1.5;
+}
+Example (index.html file):
+
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>External CSS Example</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <h1>Styling with External CSS</h1>
+    <p>This content is styled by an external stylesheet.</p>
+</body>
+</html>
+Activities & Practice
+1. What is the primary function of a web browser?
+Brief Answer: A web browser is an application software used to access, retrieve, and view information and content on the World Wide Web. It interprets web code (like HTML, CSS) and displays web pages to the user.
+
+2. Differentiate between the Internet and the World Wide Web.
+Brief Answer: The Internet is a global network of interconnected computer networks, providing the infrastructure for communication. The World Wide Web (WWW) is a system of interconnected hypertext documents and other web resources accessed via the Internet. The WWW is an application that runs on the Internet.
+
+3. List two advantages of using a Content Management System (CMS).
+Brief Answer: Two advantages are: 1) It allows users to create, manage, and modify website content without needing extensive coding knowledge, simplifying web management. 2) It supports collaborative workflow with user roles and permissions, making it easier for teams to work on a website.
+
+4. What is the purpose of the alt attribute in the HTML <img> tag?
+Brief Answer: The alt attribute provides alternative text for an image. This text is displayed if the image cannot be loaded (e.g., due to a broken link or slow connection) or if a user is using a screen reader for accessibility purposes.
+
+5. Name the three types of CSS implementation.
+Brief Answer: The three types of CSS implementation are Inline CSS, Internal (or Embedded) CSS, and External CSS.
+
+Sample Board Exam Questions
+1. Define web browser and search engine. Explain how a search engine works with suitable points. (8 marks)
+
+Concise Solution:
+
+A web browser is an application software that allows users to access, retrieve, and view information and content on the World Wide Web. Examples include Google Chrome, Mozilla Firefox. A search engine is a web-based tool that enables users to locate information on the World Wide Web by searching its database based on keywords. Examples include Google, Bing.
+
+How a search engine works:
+
+Crawling: Search engine bots (spiders) continuously explore the internet, following links to discover new and updated web pages.
+Indexing: The information collected by crawlers is then processed and stored in a vast database, creating an index. This index categorizes content for quick retrieval.
+Searching/Ranking: When a user enters a query, the search engine quickly scans its index for relevant pages. It then uses complex algorithms to rank these pages by relevance and authority, presenting the most useful results to the user.
+2. What is HTML? Describe the basic structure of an HTML document and explain the difference between HTML tags and attributes with examples. (8 marks)
+
+Concise Solution:
+
+HTML (Hypertext Markup Language) is the standard markup language used for creating web pages. It provides the fundamental structure of web content.
+
+Basic structure of an HTML document:
+
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Document Title</title>
+</head>
+<body>
+    <!-- Visible content goes here -->
+</body>
+</html>
+This structure includes the <!DOCTYPE html> declaration, the root <html> element, the <head> section for metadata (like <title>), and the <body> section for the visible page content.
+
+Difference between HTML Tags and Attributes:
+
+Feature	HTML Tags	HTML Attributes
+Definition	Hidden keywords that define how content is formatted and displayed. They structure the content.	Provide additional information or properties about an HTML element.
+Syntax	Enclosed in angle brackets (e.g., <p>, <img>). Often come in pairs (opening and closing).	Specified within the opening tag of an element, as name/value pairs (e.g., name="value").
+Purpose	To create elements like headings, paragraphs, lists, images.	To modify the behavior or appearance of an element.
+Example	<h1>My Heading</h1>, <br>	<img src="pic.jpg" alt="My Picture"> (src and alt are attributes)
+3. Briefly define Cascading Style Sheets (CSS). Explain its three types of implementation with suitable HTML and CSS code examples. (8 marks)
+
+Concise Solution:
+
+Cascading Style Sheets (CSS) is a stylesheet language used to describe the presentation of a document written in HTML. It controls the visual styling of web pages, such as colors, fonts, layout, and responsiveness.
+
+Types of CSS implementation:
+
+Inline CSS: Styles are applied directly to a single HTML element using the style attribute. This is suitable for unique styles for a specific element.
+
+<p style="color: red; text-align: center;">This text is red and centered.</p>
+        
+Internal CSS: Styles are defined within a <style> tag placed in the <head> section of an HTML document. It applies styles to a single web page.
+
+<head>
+    <style>
+        h1 {
+            color: blue;
+        }
+    </style>
+</head>
+<body>
+    <h1>Blue Heading</h1>
+</body>
+        
+External CSS: Styles are written in a separate .css file and linked to the HTML document using the <link> tag in the <head> section. This is the most efficient method for styling multiple pages consistently.
+styles.css:
+
+
+body {
+    background-color: lightblue;
+}
+        
+index.html:
+
+
+<head>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <p>This page has a light blue background.</p>
+</body>
+        
+
+</p>
         
     </body>
 </html>
